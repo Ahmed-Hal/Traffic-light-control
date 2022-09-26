@@ -37,12 +37,12 @@ function App_start()
 	interrupt_enable();			//enable Interrupt register initialized above
 	while(1)
 	{
-		traffic_light();		
+		traffic_light();		//Start traffic light flow
 	}
 return OK;
 }
 //Interrupt Service Routine (ISR)
 ISR(EXT_INT_0)
 {
-	isPedestrian();
+	isPedestrian();				//button is pressed > Chick if now is pedestrian mood and act on it
 }
